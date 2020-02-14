@@ -1,6 +1,5 @@
 package com.chapter8.chapter832;
 
-import org.junit.Test;
 
 /**
  * @author EricZhao
@@ -13,7 +12,7 @@ public class TestPlus {
     int i = 0;
 
 
-    @Test
+
     public void getSys(){
         int h = i++;
         System.out.println(h);

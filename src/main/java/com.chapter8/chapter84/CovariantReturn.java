@@ -25,7 +25,8 @@ class Wheat extends Grain{
 }
 
 /**
- * @Description
+ * @Description 协变返回类型
+ * 导出类（子类）覆盖（即重写）基类（父类）方法时，返回的类型可以是基类方法返回类型的子类
  */
 class Mill{
     Grain process(){
@@ -43,8 +44,11 @@ public class CovariantReturn {
         Mill mill = new Mill();
         Grain process = mill.process();
         System.out.println(process);
+        //预计输出grain
         mill = new WheatMill();
+        //协变返回类型允许返回更具体的类型
         process = mill.process();
         System.out.println(process);
+        //预计输出wheat
     }
 }
